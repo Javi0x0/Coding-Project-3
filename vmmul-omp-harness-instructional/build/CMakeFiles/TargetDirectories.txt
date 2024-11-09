@@ -1,0 +1,7 @@
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/rebuild_cache.dir
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/benchmark-openmp.dir
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/benchmark-blas.dir
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/edit_cache.dir
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/benchmark-vectorized.dir
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/benchmark-basic.dir
+/global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build/CMakeFiles/benchmark.dir
