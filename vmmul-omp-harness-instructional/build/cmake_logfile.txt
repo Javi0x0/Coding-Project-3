@@ -1,0 +1,7 @@
+-- Cray Programming Environment 2.7.30 C
+-- Cray Programming Environment 2.7.30 CXX
+-- compiler = GNU
+-- setting vector flags for gcc compiler = GNU
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /global/homes/j/javi/Coding-Project-3/vmmul-omp-harness-instructional/build
