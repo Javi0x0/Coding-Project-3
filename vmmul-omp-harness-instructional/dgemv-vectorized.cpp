@@ -19,7 +19,7 @@ void my_dgemv(int n, double* A, double* x, double* y) {
         _mm256_storeu_pd(temp_array, temp_vec);
         double temp = temp_array[0] + temp_array[1] + temp_array[2] + temp_array[3];
 
-        // Remainder loop (for elements not divisible by 4)
+        // Handle remaining elements (for elements not divisible by 4)
         for (; j < n; j++) {
             temp += A[i * n + j] * x[j];
         }
