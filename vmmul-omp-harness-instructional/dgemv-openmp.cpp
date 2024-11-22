@@ -13,27 +13,20 @@ const char* dgemv_desc = "OpenMP dgemv.";
  */
 
 void my_dgemv(int n, double* A, double* x, double* y) {
-/*
-   #pragma omp parallel
-   {
-      int nthreads = omp_get_num_threads();
-      int thread_id = omp_get_thread_num();
-
-      //printf("my_dgemv(): Hello world: thread %d of %d checking in. \n", thread_id, nthreads);
-      //printf("my_dgemv(): For actual timing runs, please comment out these printf() and omp_get_*() statements. \n");
-   }
-*/
-   #pragma omp parallel for
-    for(int i = 0; i < n; i++) {
-        double temp = 0;
-        for(int j = 0; j < n; j++) {
-            temp += A[i*n + j] * x[j];
-        }
-        y[i] = temp + y[i];
+    // Initialize the output vector y
+    #pragma omp parallel for
+    for (int i = 0; i < n; i++) {
+        y[i] = 0.0; // Initialize y[i] to 0 before accumulation
     }
-   // insert your dgemv code here. you may need to create additional parallel regions,
-   // and you will want to comment out the above parallel code block that prints out
-   // nthreads and thread_id so as to not taint your timings
 
+    // Perform the matrix-vector multiplication
+    #pragma omp parallel for
+    for (int i = 0; i < n; i++) {
+        double temp = 0.0; // Temporary variable for accumulation
+        for (int j = 0; j < n; j++) {
+            temp += A[i * n + j] * x[j]; // Accumulate the result
+        }
+        y[i] += temp; // Update y[i] with the accumulated value
+    }
 }
 
